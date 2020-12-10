@@ -1,35 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import CommentDetail from './CommentDetail';
 
 const App = () => {
   return (
     <div className="ui container comments">
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="avatar" src='https://source.unsplash.com/random'/>
-        </a>
-        <div className="contant">
-          <a href="/" className="author">
-            Sam
-        </a>
-          <div className="metadata">
-            <span className="date">
-              Today at 6 pm
-        </span>
-          </div>
-          <div className="text">
-            Nice blog post!
-        </div>
-        </div>
-      </div>
+      <CommentDetail
+        author="Sam"
+        timeAgo="Today at 4:45PM"
+        comment="Nice blog post!"
+        src="https://source.unsplash.com/random"
+      />
+      <CommentDetail
+        author="Antony"
+        timeAgo="Today at 11:45AM"
+        comment="Hooray!"
+        src="https://source.unsplash.com/random"
+      />
+      <CommentDetail
+        author="Anna"
+        timeAgo="Yesterday at 2:41PM"
+        comment="Fancy outfit!"
+        src="https://source.unsplash.com/random"
+      />
     </div>
   );
 };
 
 // Take the react component and show it on the screen
-ReactDOM.render(
-  <App />,
-  document.querySelector('#root')
-);
-
-
+ReactDOM.render (<App />, document.querySelector ('#root'));
